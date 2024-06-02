@@ -1,22 +1,19 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite + TS</title>
 </head>
-
 <body>
   <div id="app" class="p-2">
-    <button class="acquire border border-black rounded px-2 py-1 hover:bg-black hover:text-white">Acquire video</button>
-    <button class="init-transport border border-black rounded px-2 py-1 hover:bg-black hover:text-white">Connect
-      Transport</button>
-    <button class="init-encoder border border-black rounded px-2 py-1 hover:bg-black hover:text-white">Initialize
-      Encoder</button>
-    <button class="init-decoder border border-black rounded px-2 py-1 hover:bg-black hover:text-white">Initialize
-      Decoder</button>
+    <button id="acquire-camera" class="acquire border border-black rounded px-2 py-1 hover:bg-black hover:text-white">Acquire video-camera</button>
+    <button id="acquire-screen" class="acquire border border-black rounded px-2 py-1 hover:bg-black hover:text-white">Acquire video-screen</button>
+    <button id="cancel-acquisition" class="cancel border border-black rounded px-2 py-1 hover:bg-black hover:text-white">Cancel Acquisition</button>
+    <button id="init-transport" class="init-transport border border-black rounded px-2 py-1 hover:bg-black hover:text-white">Connect Transport</button>
+    <button id="init-encoder" class="init-encoder border border-black rounded px-2 py-1 hover:bg-black hover:text-white">Initialize Encoder</button>
+    <button id="init-decoder" class="init-decoder border border-black rounded px-2 py-1 hover:bg-black hover:text-white">Initialize Decoder</button>
     <br>
     <div class="flex gap-2 my-4 w-full justify-between overflow-hidden">
       <div class="local w-1/2 h-full border border-black px-2">Local Video</div>
@@ -29,9 +26,7 @@
     </div>
     <div class="my-2">Output: </div>
     <div class="w-full border border-black p-2 overflow-y-scroll h-72 output"></div>
-
   </div>
   <script type="module" src="/src/main.ts"></script>
 </body>
-
 </html>
