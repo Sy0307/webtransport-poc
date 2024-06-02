@@ -1,7 +1,7 @@
 import { TransportDirection } from "../transport";
 
 export interface WorkerData {
-    type: 'init' | 'init-transport' | 'init-encoder' | 'init-decoder' | 'media' | 'metrics' | 'log'
+    type: 'init' | 'init-transport' | 'init-encoder' | 'init-decoder' | 'media' | 'metrics' | 'log' | 'audio'
     data: unknown
 }
 

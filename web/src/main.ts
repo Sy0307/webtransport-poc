@@ -1,6 +1,7 @@
 // @ts-ignore embed the certificate fingerprint using bundler
 import fingerprintHex from '../../cert/localhost.hex?raw';
 
+// 注意这里所有的端口号都是 4443 
 import { Logger } from "./logger";
 import "./style.css"
 import { Transport } from "./transport";
@@ -156,5 +157,6 @@ const appendVideo = (selector: string, stream: MediaStream) => {
   videoNode.className = "my-2"
   videoNode.autoplay = true
   videoNode.srcObject = stream
+  
   document.querySelector<HTMLDivElement>(selector)!.append(videoNode)
 }

@@ -29,12 +29,12 @@ export class MediaHandler {
     }
 
     async acquireVideo() {
-        const tracks = await this.getUserMedia({
+        const tracks = await navigator.mediaDevices.getDisplayMedia({
             video: {
                 width: 1080,
                 height: 720
-            },
-        })
+            }
+        });
         const vtracks = tracks.getVideoTracks()
         if (vtracks.length == 0) {
             throw new Error('failed to acquire video track')
